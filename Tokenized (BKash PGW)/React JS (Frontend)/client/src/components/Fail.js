@@ -5,7 +5,7 @@ function Fail() {
   const queryParams = new URLSearchParams(location.search);
   let statusMessage;
   if (queryParams.get('data')){
-    statusMessage = JSON.parse(queryParams.get('data'));
+    statusMessage = queryParams.get('data');
   }
   //console.log(statusMessage);
     return(
