@@ -13,14 +13,14 @@ const createPayment = async (req) => {
         mode: "0011",
         payerReference: " ",
         callbackURL: bkashConfig.backend_callback_url,
-        amount: req.amount ? req.amount : 1, 
+        amount: req.amount ? req.amount : 1,
         currency: "BDT",
         intent: "sale",
-        merchantInvoiceNumber: "Inv" + uuidv4().substring(0, 5)
+        merchantInvoiceNumber: "Inv" + uuidv4().substring(0, 5),
       }),
     });
     const createResult = await createResopnse.json();
-    
+
     return createResult;
   } catch (e) {
     console.log(e);
