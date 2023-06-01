@@ -35,7 +35,7 @@ const bkashCallback = async (req, res) => {
         );
       }
       // Your frontend success route
-      res.redirect(
+      res.send(
         `${bkashConfig.frontend_success_url}?data=${response.statusMessage}`
       );
     } else {

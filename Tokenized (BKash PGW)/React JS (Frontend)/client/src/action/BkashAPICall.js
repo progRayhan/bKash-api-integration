@@ -3,7 +3,7 @@ export default function BkashAPICall() {
   console.log("Button clicked !!");
   axios
     .post("http://localhost:4000/api/bkash/create", {
-      amount: "20",
+      amount: "100",
     })
     .then((response) => {
       console.log("Data was successfully sent.", response);
