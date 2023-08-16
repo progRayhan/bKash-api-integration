@@ -16,11 +16,11 @@ const createPayment = async (req) => {
         amount: req.amount ? req.amount : 1,
         currency: "BDT",
         intent: "sale",
-        merchantInvoiceNumber: "Inv" + uuidv4().substring(0, 5),
+        merchantInvoiceNumber: "Inv" + uuidv4().substring(0, 10),
       }),
     });
     const createResult = await createResopnse.json();
-
+    console.log(createResult);
     return createResult;
   } catch (e) {
     console.log(e);
